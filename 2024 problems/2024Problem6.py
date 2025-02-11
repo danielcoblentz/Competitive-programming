@@ -19,6 +19,7 @@ door_cutoff = 40/3  # meters
 # remain human and just run to the door
 run_cutoff = 100/3  # meters
 
+
 def calculate(hall: dict) -> tuple[float, int]:
     def run(dist: float, pos: float, door_positions: list, is_wolf: bool, 
             time: float, transformations: int) -> tuple[float, int]:
@@ -89,16 +90,14 @@ if __name__ == "__main__":
         dist = float(input())  # get distance to be traveled
 
         num_doors = int(input())  # get number of doors
+        doors = []
 
-        if num_doors == 0:
-            halls.append({"dist": dist, "door_positions": []})
-            continue
-
-        # get list of positions of doors
-        door_positions = list(map(float, input().split(" ")))
+        # Get each door
+        for _ in range(num_doors):
+            doors.append(float(input()))
 
         # append a dictionary to `halls`
-        halls.append({"dist": dist, "door_positions": door_positions})
+        halls.append({"dist": dist, "door_positions": doors})
 
     for hall in halls:
         time, transformations = calculate(hall)
