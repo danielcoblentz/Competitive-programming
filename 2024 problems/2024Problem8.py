@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""
-Problem 8 — Preprocessing (limited #ifdef / #else / #endif)
-Read a source until a line with <EOF>. Then for each following line (sets of symbols),
-output a comment with the symbols and the preprocessed text result.
-"""
+
 
 import sys
 
@@ -11,7 +7,7 @@ import sys
 def preprocess(lines, defined):
     # lines: list of source lines (without trailing newlines)
     out = []
-    # We'll use a stack to track whether current region is included.
+    # We'll use a stack to track whether current region is included
     # Each stack element: (has_else, include_before_else, include_after_else)
     # Simpler: maintain include_stack of booleans indicating whether this level's text is active.
     # But due to #else we need to flip at that depth.
