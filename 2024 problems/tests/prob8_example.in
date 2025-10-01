@@ -1,0 +1,14 @@
+Hello, world
+#ifdef Apple
+Foobar
+#ifdef Banana
+>>> A strong smell of petroleum prevails throughout <<<
+#else
+Woo hoo
+#endif
+#endif
+Yeah
+<EOF>
+Apple Banana
+Apple
+Banana
