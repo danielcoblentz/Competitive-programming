@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run C++ (g++-15)",
+            "type": "shell",
+            "command": "g++-15 -std=c++17 -O2 -o ${fileDirname}/${fileBasenameNoExtension} ${file} && ${fileDirname}/${fileBasenameNoExtension}",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compile and run active C++ file with g++-15",
+            "presentation": {
+                "reveal": "always",
+                "focus": true
+            }
+        }
+    ]
+}

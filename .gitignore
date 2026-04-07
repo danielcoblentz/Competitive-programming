@@ -1,0 +1,18 @@
+# Compiled binaries
+a.out
+*.o
+*.exe
+usaco/sample_problem
+usaco/setup
+codeforces/ReplaceAndSum
+
+# macOS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code (optional — remove if you want to track these)
+# .vscode/
